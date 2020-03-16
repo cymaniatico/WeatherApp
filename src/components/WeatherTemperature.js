@@ -2,7 +2,12 @@ import React from 'react';
 import WeatherIcons from 'react-weathericons';
 
 const icons ={
-    sunny: "day-sunny",
+    cloud: "cloud",
+    cloudy: "cloudy",
+    sun: "day-sunny",
+    rain: "rain",
+    snow: "snow",
+    windy: "windy",
     fog: "day-fog",
 };
 
