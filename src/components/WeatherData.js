@@ -8,6 +8,7 @@ import {
     RAIN,
     SNOW,
     WINDY,
+    FOG,
 }from './../constants/weathers'
 
 const WeatherData = () =>(
