@@ -9,7 +9,7 @@ import {
     SNOW,
     WINDY,
     FOG,
-}from './../constants/weathers'
+}from './../../../constants/weathers'
 
 const icons ={
     [CLOUD]: "cloud",
