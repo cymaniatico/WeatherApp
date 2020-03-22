@@ -3,11 +3,24 @@ import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
 import {
     SUN,
+    CLOUD,
+    RAIN,
+    SNOW,
+    WINDY,
+    THUNDER,
+    DRIZZLE,
 }from './../../../constants/weathers'
 import './styles.css';
 
 const icons ={
     [SUN]: "day-sunny",
+    [CLOUD]:"cloud",
+    [RAIN]:"rain",
+    [SNOW]:"snow",
+    [WINDY]:"windy",
+    [THUNDER]:"day-thunderstore",
+    [DRIZZLE]:"drizzle",
+
 };
 
 const getWeatherIcon = weatherState =>{
