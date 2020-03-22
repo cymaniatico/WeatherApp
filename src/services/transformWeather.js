@@ -1,11 +1,6 @@
 import convert from 'convert-units';
 import {
-    CLOUD,
-    CLOUDY,
     SUN,
-    RAIN,
-    SNOW,
-    FOG,
 }from './../constants/weathers'
 
 const getTemp = kelvin => {

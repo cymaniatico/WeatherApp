@@ -6,21 +6,16 @@ import Location from './Location';
 import WeatherData from './WeatherData/';
 import './styles.css'
 import {
-    CLOUD,
-    CLOUDY,
     SUN,
-    RAIN,
-    SNOW,
-    FOG,
 }from './../../constants/weathers'
 
 
 
 const data = {
-    temperature: 38,
+    temperature: 0,
     weatherState: SUN,
-    humidity: 10,
-    wind: '12 m/s',
+    humidity: 0,
+    wind: '0 m/s',
 }
 
 class WeatherLocation extends Component {
@@ -31,7 +26,24 @@ class WeatherLocation extends Component {
             city: 'Santa Marta',
             data: data,
         };
+        console.log("constructor");
     }
+
+    componentDidMount() {
+        console.log("componentDidMount");
+        this.handleUpdateClick();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("componentDidUpdate");
+        
+    }
+
+    
+    
+
+    
+    
 
    
     handleUpdateClick = () =>{
@@ -40,6 +52,7 @@ class WeatherLocation extends Component {
                 
                 return resolve.json();//return promise
             }).then(data=>{
+                console.log("handleUpdateClick")
                 const newWeather = transportWeather(data);
                 console.log(newWeather);
                 this.setState({
@@ -47,13 +60,14 @@ class WeatherLocation extends Component {
                 });
             }); 
 
-        console.log("actualizado");
+        
         /*this.setState({
             //city: 'Santa Marta',
             data: data2
         });*/
     }
     render(){
+        console.log("render");
         const {city, data}= this.state;
         return( <div className="weatherLocationCont">
                     <Location city={city}></Location>
