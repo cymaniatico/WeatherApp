@@ -10,12 +10,14 @@ const getWeatherState = weather_data =>{
     return SUN;
 }
 const transformWeather = weather_data =>{
+    const city = weather_data.name;
     const{humidity, temp }=weather_data.main;
     const{speed}=weather_data.wind;
     const weatherState = getWeatherState(weather_data);
     const temperature = getTemp(temp);
 
     const data = {
+        city,
         humidity,
         temperature,
         weatherState,
