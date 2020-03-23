@@ -19,16 +19,16 @@ class WeatherLocation extends Component {
             city,
             data: null,
         };
-        console.log("constructor");
+        //console.log("constructor");
     }
 
     componentDidMount() {
-        console.log("componentDidMount");
+        //console.log("componentDidMount");
         this.handleUpdateClick();
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log("componentDidUpdate");
+        //console.log("componentDidUpdate");
         
     }
 
@@ -40,9 +40,9 @@ class WeatherLocation extends Component {
                 
                 return resolve.json();//return promise
             }).then(data=>{
-                console.log("handleUpdateClick")
+                //console.log("handleUpdateClick")
                 const newWeather = transportWeather(data);
-                console.log(newWeather);
+                //console.log(newWeather);
                 this.setState({
                     data: newWeather
                 });
@@ -57,9 +57,9 @@ class WeatherLocation extends Component {
 
     render=()=>{
         //console.log("render");
-        const {onWeatherLocacionClick} = this.props;
+        const {onWeatherLocationClick} = this.props;
         const {city, data}= this.state;
-        return( <div className="weatherLocationCont" onClick={onWeatherLocacionClick}>
+        return( <div className="weatherLocationCont" onClick={onWeatherLocationClick}>
                     <Location city={city}></Location>
                     {data ? 
                     <WeatherData data={data}></WeatherData> :
@@ -72,6 +72,6 @@ class WeatherLocation extends Component {
 };
 WeatherLocation.propTypes = {
     city: PropTypes.string.isRequired,
-    onWeatherLocacionClick: PropTypes.func,
+    onWeatherLocationClick: PropTypes.func,
 }
 export default WeatherLocation;
