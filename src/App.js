@@ -53,9 +53,8 @@ class App extends Component{
             <Paper elevation={4}>
               <div className="details">
                 {
-                city ? //city === null 
-                <ForecastExtended city={city}></ForecastExtended>:
-                <h1>No se ha seleccionado ciudad</h1>
+                city && //city === null 
+                <ForecastExtended city={city}></ForecastExtended>
                 }
                 
               </div>
