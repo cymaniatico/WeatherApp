@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 //import WeatherLocation from './components/WeatherLocation';
 import { Grid, Col, Row } from 'react-flexbox-grid';
 import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended'
 import './App.css';
 //import { render } from '@testing-library/react';
 
@@ -42,7 +43,9 @@ class App extends Component{
           </Col>
           <Col xs={12} md={6}>
             <Paper elevation={4}>
-              <div className="details"></div>
+              <div className="details">
+                <ForecastExtended></ForecastExtended>
+              </div>
             </Paper>
           </Col>
         </Row>
