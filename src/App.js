@@ -23,7 +23,7 @@ class App extends Component{
 
   constructor(){
     super();
-    this.state = {city: 'Nueva ciudad'};
+    this.state = {city: null};
   }
   handleSelectedLocation = city =>{
     this.setState({city});//this.setState({city: city});
@@ -52,7 +52,12 @@ class App extends Component{
           <Col xs={12} md={6}>
             <Paper elevation={4}>
               <div className="details">
-                <ForecastExtended city={city}></ForecastExtended>
+                {
+                city ? //city === null 
+                <ForecastExtended city={city}></ForecastExtended>:
+                <h1>No se ha seleccionado ciudad</h1>
+                }
+                
               </div>
             </Paper>
           </Col>
@@ -60,7 +65,6 @@ class App extends Component{
       </Grid>
     );
   }
-  
 }
 
 export default App;
