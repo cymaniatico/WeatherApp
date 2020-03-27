@@ -5,10 +5,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 //import WeatherLocation from './components/WeatherLocation';
 import { Grid, Col, Row } from 'react-flexbox-grid';
-import {createStore} from 'redux';
+//import {createStore} from 'redux';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended'
 import {setCity} from './actions';
+import {store} from './store';
 import './App.css';
 //import { render } from '@testing-library/react';
 
@@ -21,10 +22,10 @@ const cities = [
   'Bogota, co',
 ];
 
-const store = createStore(()=>{}, 
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+//const store = createStore(()=>{}, 
+  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); //creacion de store (en carpeta store)
 
-//const setCity = value => ({type: 'setCity', value}); //actionCreator
+//const setCity = value => ({type: 'setCity', value}); //actionCreator(en carpeta actions)
 
 class App extends Component{
 
