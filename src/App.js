@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
+//import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 //import WeatherLocation from './components/WeatherLocation';
 import { Grid, Col, Row } from 'react-flexbox-grid';
@@ -21,7 +21,7 @@ const cities = [
 ];
 
 const store = createStore(()=>{}, 
-  window.__REDUX_DEVTOOL_EXTENSION__ && window.__REDUX_DEVTOOL_EXTENSION__());
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class App extends Component{
 
@@ -42,10 +42,8 @@ class App extends Component{
         <Row>
           <AppBar position='sticky'>
             <Toolbar>
-              <Typography variant='title' color='inherit'>
-                Weather App
-              </Typography>
-            </Toolbar>
+            <h1>Weather App</h1>
+             </Toolbar>
           </AppBar>
         </Row>
         <Row>
