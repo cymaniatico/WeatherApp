@@ -3,7 +3,6 @@ import {
     SUN,
     CLOUD,
     RAIN,
-    //WINDY,
     SNOW,
     THUNDER,
     DRIZZLE,
