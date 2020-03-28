@@ -6,6 +6,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 //import WeatherLocation from './components/WeatherLocation';
 import { Grid, Col, Row } from 'react-flexbox-grid';
+import PropTypes from 'prop-types';
 //import {createStore} from 'redux';
 import LocationList from './components/LocationList';
 import ForecastExtended from './components/ForecastExtended'
@@ -37,7 +38,7 @@ class App extends Component{
     this.state = {city: null};
   }
   handleSelectedLocation = city =>{
-    this.setState({city});//this.setState({city: city});
+    this.setCity({city});//this.setState({city: city});
     console.log(`handleSelectedLocation ${city}`);
     
 
@@ -80,9 +81,13 @@ class App extends Component{
 
 //export default App;
 
-const mapDispatchToProposActions = dispatch =>({
+App.propTypes = {
+  setCity: PropTypes.func.isRequired,
+}
+
+const mapDispatchToProps = dispatch =>({
   setCity: value =>dispatch(setCity(value))
 });
-const AppConected = connect (null, mapDispatchToProposActions)(App);
+const AppConected = connect (null, mapDispatchToProps)(App);
 
 export default AppConected;
